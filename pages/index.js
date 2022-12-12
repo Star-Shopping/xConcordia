@@ -85,8 +85,9 @@ headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
 }
 
 export function getStaticProps() {
+  const dataX = getOccupancy();
   const posts = getPosts();
   const globalData = getGlobalData();
 
-  return { props: { posts, globalData } };
+  return { props: { posts, globalDat, dataX } };
 }

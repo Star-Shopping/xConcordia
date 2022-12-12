@@ -50,12 +50,12 @@ export async function getServerSideProps() {
 
   // Use the `json()` method to parse the response as JSON
   const data = await response.json();
-  console.log(data);
+  
 
   // Return the data as props for the page
   return { props: { data } };
 }
-
+console.log(data);
 export const getPosts = () => {
   let posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));

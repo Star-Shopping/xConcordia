@@ -83,6 +83,7 @@ headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
       />
+      {getOccupancy()}
     </Layout>
   );
 }

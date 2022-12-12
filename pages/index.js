@@ -13,12 +13,6 @@ const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
 const API_USERNAME = '520';
 const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
-
-
-
-
-
-
 export default function Index({ posts, globalData, dataX }) {
 
 
@@ -89,5 +83,5 @@ export function getStaticProps() {
   const posts = getPosts();
   const globalData = getGlobalData();
 
-  return { props: { posts, globalDat, dataX } };
+  return { props: { posts, globalData, dataX } };
 }

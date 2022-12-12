@@ -19,7 +19,7 @@ const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
 
 
-export default function Index({ posts, globalData }) {
+export default function Index({ posts, globalData, dataX }) {
 
 
 //make a fetch function to get the data from the API

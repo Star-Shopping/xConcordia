@@ -92,5 +92,5 @@ export function getStaticProps() {
   const posts = getPosts();
   const globalData = getGlobalData();
 
-  return { props: { posts, globalData, dataX } };
+  return { props: { posts, globalData } };
 }

@@ -8,6 +8,26 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
+// Import the `fetch()` method from the isomorphic-unfetch package
+import fetch from 'isomorphic-unfetch';
+
+const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
+const API_USERNAME = '520';
+const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
+
+const response = await fetch(API_URL, {
+  method: 'GET',
+  headers: {
+    'Authorization': `Basic ${btoa(`${API_USERNAME}:${API_PASSWORD}`)}`,
+  }
+});
+// Use the `json()` method to parse the response as JSON
+const data = await response.json();
+
+// Use the `console.log()` method to print the data in the console
+console.log(data);
+
+
 export default function Index({ posts, globalData }) {
   return (
     <Layout>

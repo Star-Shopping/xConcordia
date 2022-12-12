@@ -88,7 +88,7 @@ function getPeople(){
 }
 
 export function getStaticProps() {
-  const dataX = getOccupancy();
+  getPeople();
   const posts = getPosts();
   const globalData = getGlobalData();
 

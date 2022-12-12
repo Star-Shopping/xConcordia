@@ -8,10 +8,6 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
-// Import the `fetch()` method from the isomorphic-unfetch package
-import fetch from 'isomorphic-unfetch';
-
-
 
 export default function Index({ posts, globalData }) {
   

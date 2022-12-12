@@ -7,7 +7,7 @@ export const getGlobalData = () => {
         'xConcordia';
     const footerText = process.env.BLOG_FOOTER_TEXT ?
         decodeURI(process.env.BLOG_FOOTER_TEXT) :
-        'All rights reserved.';
+        'yeeeeeeeeee buddyyyyy.';
 
     return {
         name,

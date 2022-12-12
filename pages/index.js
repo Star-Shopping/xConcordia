@@ -39,7 +39,6 @@ export default function Index({ posts, globalData }) {
                       {post.data.description}
                     </p>
                   )}
-                  <ArrowIcon className="mt-4" />
                 </a>
               </Link>
             </li>

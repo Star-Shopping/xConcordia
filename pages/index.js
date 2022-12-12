@@ -22,10 +22,6 @@ const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 export default function Index({ posts, globalData }) {
 
 
-const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
-const API_USERNAME = '520';
-const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
-
 //make a fetch function to get the data from the API
 async function getOccupancy(){
   const response = await fetch(API_URL, {method:'GET', 
@@ -89,7 +85,6 @@ headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
 }
 
 export function getStaticProps() {
-  getOccupancy();
   const posts = getPosts();
   const globalData = getGlobalData();
 

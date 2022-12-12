@@ -23,39 +23,7 @@ export const sortPostsByDate = (posts) => {
     return bDate - aDate;
   });
 };
-const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
-const API_USERNAME = '520';
-const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
-// Create a new page called "API"
-function API({ data }) {
-  // Use the data from the API in your page
-  return (
-    <div>
-      {data.map((item) => (
-        <p>{item.name}</p>
-      ))}
-    </div>
-  );
-}
-
-// Add the `getServerSideProps()` method to the page
-export async function getServerSideProps() {
-  // Use the `fetch()` method to perform the GET request
-  const response = await fetch(API_URL, {
-    headers: {
-      'Authorization': 'Basic ' + btoa(`${API_USERNAME}:${API_PASSWORD}`)
-    }
-  });
-
-  // Use the `json()` method to parse the response as JSON
-  const data = await response.json();
-  
-
-  // Return the data as props for the page
-  return { props: { data } };
-}
-console.log(data);
 export const getPosts = () => {
   let posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));

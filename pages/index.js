@@ -26,13 +26,11 @@ const API_USERNAME = '520';
 const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
 //make a fetch function to get the data from the API
-const getOccupancy = async () => {
-  const response = await fetch(API_URL, {
-    method: 'GET',
-    headers: {
-            'Authorization': 'Basic ' + btoa(`${API_USERNAME}:${API_PASSWORD}`)
-    },
-  });
+async function getOccupancy(){
+  const response = await fetch(API_URL, {method:'GET', 
+headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
+.then(response => response.json())
+.then(json => console.log(json));
   const data = await response.json();
   console.log(data);
 };

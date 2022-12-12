@@ -7,7 +7,6 @@ import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import { encode } from "base-64";
 
 
 const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
@@ -21,7 +20,7 @@ const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
 
 export default function Index({ posts, globalData }) {
-console.log("hello");
+
 
 const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
 const API_USERNAME = '520';
@@ -35,6 +34,7 @@ headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
 .then(json => console.log(json));
   const data = await response.json();
   console.log(data);
+  
 };
 
   
@@ -90,6 +90,6 @@ headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
 export function getStaticProps() {
   const posts = getPosts();
   const globalData = getGlobalData();
-console.log("hello2");
+
   return { props: { posts, globalData } };
 }

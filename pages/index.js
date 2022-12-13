@@ -16,7 +16,7 @@ const username = '520';
 const password = '276377ba5206683e51d50fb86c378dc5';
 
 axios
-  .get('https://opendata.concordia.ca/API/v1/library/occupancy/', {
+  .get('opendata.concordia.ca/API/v1/library/occupancy/', {
     auth: {
       username,
       password

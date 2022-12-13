@@ -56,7 +56,6 @@ const Repos = ({user}) => {
 
   
   return (
-    Repos('bradcypert'),
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
@@ -107,6 +106,7 @@ const Repos = ({user}) => {
 }
 
 export function getStaticProps() {
+  Repos('bradcypert');
   const posts = getPosts();
   const globalData = getGlobalData();
 

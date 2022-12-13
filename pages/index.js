@@ -13,26 +13,19 @@ import axios from 'axios';
 export default function Index({ posts, globalData }) {
 
 
-const Repos = ({user}) => {
-  const [repos, setRepos] = React.useState([]);
-  
-  React.useEffect(() => {
-  	const fetchData = async () => {
-    	const response = await axios.get(`https://api.github.com/users/${user}/repos`);
-    	setRepos(response.data);
+axios
+  .get('https://opendata.concordia.ca/API/v1/library/occupancy/', {
+    auth: {
+      username: '520',
+      password: '276377ba5206683e51d50fb86c378dc5'
     }
-    
-    console.log(fetchData());
-  }, []);
-  
-  return (
-  <div>
-    {repos.map(repo =>
-      <div key={repo.id}>{repo.name}</div>
-    )}
-  </div>
-  );
-}  
+  })
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 // //make a fetch function to get the data from the API
 // async function getOccupancy(){
 //   const response = await fetch(API_URL, {method:'GET', 

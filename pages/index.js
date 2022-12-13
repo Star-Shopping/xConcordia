@@ -9,11 +9,9 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
 
-const API_URL = 'https://opendata.concordia.ca/API/v1/library/occupancy/';
-const API_USERNAME = '520';
-const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
-export default function Index({ posts, globalData, dataX }) {
+
+export default function Index({ posts, globalData }) {
 
 // //make a fetch function to get the data from the API
 // async function getOccupancy(){
@@ -26,15 +24,15 @@ export default function Index({ posts, globalData, dataX }) {
   
 // };
  
-function getPeople(){
-  return fetch('API_URL', {
-    headers: {
-      'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')
-    }
-  } )
-  .then(reponse => reponse.json())
-  .catch(error => this.handleError(error))
-}
+// function getPeople(){
+//   return fetch('API_URL', {
+//     headers: {
+//       'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')
+//     }
+//   } )
+//   .then(reponse => reponse.json())
+//   .catch(error => this.handleError(error))
+// }
 
   
   return (

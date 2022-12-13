@@ -21,3 +21,4 @@ useEffect(() => {
         setPeople(people);
     });
 }, []);
+getPeople();

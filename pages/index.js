@@ -8,10 +8,26 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
-
-
-
-
+const Repos = ({user}) => {
+  const [repos, setRepos] = React.useState([]);
+  
+  React.useEffect(() => {
+  	const fetchData = async () => {
+    	const response = await axios.get(`https://api.github.com/users/${user}/repos`);
+    	setRepos(response.data);
+    }
+    
+    fetchData();
+  }, []);
+  
+  return (
+  <div>
+    {repos.map(repo =>
+      <div key={repo.id}>{repo.name}</div>
+    )}
+  </div>
+  );
+}
 export default function Index({ posts, globalData }) {
 
 

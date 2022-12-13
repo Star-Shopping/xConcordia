@@ -20,33 +20,50 @@ export function GradientBackground({ variant, className }) {
 
 export default function Layout({ children }) {
     
-
-
-  // const setAppTheme = () => {
-  //   const darkMode = localStorage.getItem('theme') === 'dark';
-  //   const lightMode = localStorage.getItem('theme') === 'light';
-
-  //   if (darkMode) {
-  //     document.documentElement.classList.add('dark');
-  //   } else if (lightMode) {
-  //     document.documentElement.classList.remove('dark');
-  //   }
-  //   return;
-  // };
-
-  // const handleSystemThemeChange = () => {
-  //   var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-  //   darkQuery.onchange = (e) => {
-  //     if (e.matches) {
-  //       document.documentElement.classList.add('dark');
-  //       localStorage.setItem('theme', 'dark');
-  //     } else {
-  //       document.documentElement.classList.remove('dark');
-  //       localStorage.setItem('theme', 'light');
+  // const [people, setPeople] = useState([]);
+  // function getPeople() {
+  //   return fetch('API_URL', {
+  //     headers: {
+  //       'Authorization': 'Basic ' + btoa(`${API_USERNAME}:${API_PASSWORD}`)
   //     }
-  //   };
-  // };
+  //   } )
+  //   .then(response => console.log(response.json()))
+
+  //   .catch(error => this.handleError(error))
+  // }
+  // useEffect(() => {
+  //   // Call the getPeople function to fetch the list of people
+  //   getPeople().then(people => {
+  //     // Set the people state with the list of people returned by the API
+  //     setPeople(people);
+  //   });
+  // }, []);
+
+  const setAppTheme = () => {
+    const darkMode = localStorage.getItem('theme') === 'dark';
+    const lightMode = localStorage.getItem('theme') === 'light';
+
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else if (lightMode) {
+      document.documentElement.classList.remove('dark');
+    }
+    return;
+  };
+
+  const handleSystemThemeChange = () => {
+    var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    darkQuery.onchange = (e) => {
+      if (e.matches) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    };
+  };
 
   useEffect(() => {
     setAppTheme();

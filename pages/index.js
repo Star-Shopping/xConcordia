@@ -13,26 +13,7 @@ import SEO from '../components/SEO';
 
 export default function Index({ posts, globalData }) {
 
-// //make a fetch function to get the data from the API
-// async function getOccupancy(){
-//   const response = await fetch(API_URL, {method:'GET', 
-// headers: {'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')}})
-// .then(response => response.json())
-// .then(json => console.log(json));
-//   const data = await response.json();
-//   console.log(data);
-  
-// };
- 
-// function getPeople(){
-//   return fetch('API_URL', {
-//     headers: {
-//       'Authorization': 'Basic ' + btoa('API_USERNAME:API_PASSWORD')
-//     }
-//   } )
-//   .then(reponse => reponse.json())
-//   .catch(error => this.handleError(error))
-// }
+
 
   
   return (

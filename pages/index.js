@@ -100,13 +100,13 @@ const Repos = ({user}) => {
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
       />
-      
+       Repos('bradcypert')
     </Layout>
   );
 }
 
 export function getStaticProps() {
-  Repos('bradcypert');
+ 
   const posts = getPosts();
   const globalData = getGlobalData();
 

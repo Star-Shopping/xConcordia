@@ -7,7 +7,7 @@ const [people, setPeople] = useState([]);
 export function getPeople() {
     return fetch('API_URL', {
             headers: {
-                'Authorization': 'Basic ' + btoa(`${API_USERNAME}:${API_PASSWORD}`)
+                'Authorization': 'Basic ' + btoa('${API_USERNAME}:${API_PASSWORD}')
             }
         })
         .then(response => console.log(response.json()))

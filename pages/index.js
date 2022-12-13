@@ -8,6 +8,10 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
+
+export default function Index({ posts, globalData }) {
+
+
 const Repos = ({user}) => {
   const [repos, setRepos] = React.useState([]);
   
@@ -27,11 +31,7 @@ const Repos = ({user}) => {
     )}
   </div>
   );
-}
-export default function Index({ posts, globalData }) {
-
-
-  
+}  
 // //make a fetch function to get the data from the API
 // async function getOccupancy(){
 //   const response = await fetch(API_URL, {method:'GET', 

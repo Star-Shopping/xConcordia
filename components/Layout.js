@@ -20,7 +20,7 @@ export function GradientBackground({ variant, className }) {
 
 export default function Layout({ children }) {
     
-  const [people, setPeople] = useState([]);
+  // const [people, setPeople] = useState([]);
 
   // function getPeople() {
   //   return fetch('API_URL', {

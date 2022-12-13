@@ -15,15 +15,14 @@ export default function Index({ posts, globalData }) {
 const username = '520';
 const password = '276377ba5206683e51d50fb86c378dc5';
 
-axios
-  .get('opendata.concordia.ca/API/v1/library/occupancy/', {
+axios.get('https://opendata.concordia.ca/API/v1/library/occupancy/', {
     auth: {
       username,
       password
     }
   })
   .then(response => {
-    console.log(response.data);
+    console.log(JSON.stringify(response.data));
   })
   .catch(error => {
     console.error(error);

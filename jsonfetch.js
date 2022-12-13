@@ -4,7 +4,7 @@ const API_PASSWORD = '276377ba5206683e51d50fb86c378dc5';
 
 const [people, setPeople] = useState([]);
 
-function getPeople() {
+export function getPeople() {
     return fetch('API_URL', {
             headers: {
                 'Authorization': 'Basic ' + btoa(`${API_USERNAME}:${API_PASSWORD}`)

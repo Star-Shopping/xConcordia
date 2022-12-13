@@ -7,12 +7,13 @@ import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import getPeople from 'jsonfetch';
+import { getPeople } from "./jsonfetch.js";
+
 
 
 
 export default function Index({ posts, globalData }) {
-
+getPeople();
 // //make a fetch function to get the data from the API
 // async function getOccupancy(){
 //   const response = await fetch(API_URL, {method:'GET', 

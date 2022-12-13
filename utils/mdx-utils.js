@@ -72,7 +72,7 @@ export const getNextPostBySlug = (slug) => {
   const nextPostSlug = post?.filePath.replace(/\.mdx?$/, '');
 
   return {
-    title: post.data.title,
+    title: post.occupancy,
     slug: nextPostSlug,
   };
 };
@@ -90,7 +90,7 @@ export const getPreviousPostBySlug = (slug) => {
   const previousPostSlug = post?.filePath.replace(/\.mdx?$/, '');
 
   return {
-    title: post.data.title,
+    title: post.occupancy,
     slug: previousPostSlug,
   };
 };

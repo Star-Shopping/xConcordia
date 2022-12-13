@@ -55,7 +55,7 @@ axios.get('https://cors-anywhere.herokuapp.com/https://opendata.concordia.ca/API
                         {post.data.date}
                       </p>
                     )}
-                    <h2 className="text-2xl md:text-3xl">{post.data.occupancy}</h2>
+                    <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
                     {post.data.description && (
                       <p className="mt-3 text-lg opacity-60">
                         {post.data.description}

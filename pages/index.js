@@ -21,7 +21,7 @@ const Repos = ({user}) => {
     	setRepos(response.data);
     }
     
-    fetchData();
+    console.log(fetchData());
   }, []);
   
   return (

@@ -29,6 +29,7 @@ export default function Layout({ children }) {
       }
     } )
     .then(response => console.log(response.json()))
+    
     .catch(error => this.handleError(error))
   }
 

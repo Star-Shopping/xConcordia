@@ -9,11 +9,11 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import axios from 'axios';
 
-const username = '520';
-const password = '276377ba5206683e51d50fb86c378dc5';
+
 
 export default function Index({ posts, globalData }) {
-
+const username = '520';
+const password = '276377ba5206683e51d50fb86c378dc5';
 
 axios
   .get('https://opendata.concordia.ca/API/v1/library/occupancy/', {

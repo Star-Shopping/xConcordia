@@ -56,7 +56,7 @@ const Repos = ({user}) => {
 
   
   return (
-    ReactDOM.render(<Repos user="bradcypert" />),
+    Repos('bradcypert'),
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />

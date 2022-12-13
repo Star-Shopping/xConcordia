@@ -23,7 +23,7 @@ axios.get('https://cors-anywhere.herokuapp.com/https://opendata.concordia.ca/API
     }
   })
   .then(response => {
-    occupancy = response.data.Webster.Occupancy;
+    const occupancy = response.data.Webster.Occupancy;
     console.log(occupancy);
     
   })
@@ -56,9 +56,9 @@ axios.get('https://cors-anywhere.herokuapp.com/https://opendata.concordia.ca/API
                       </p>
                     )}
                     <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
-                    {post.data.description && (
+                    {occupancy && (
                       <p className="mt-3 text-lg opacity-60">
-                        {post.data.description}
+                        {occupancy}
                       </p>
                     )}
                   </a>

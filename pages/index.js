@@ -8,7 +8,6 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import axios from 'axios';
-import { MDXProvider } from '@mdx-js/react';
 
 
 

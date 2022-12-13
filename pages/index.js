@@ -14,6 +14,7 @@ import SEO from '../components/SEO';
 
 export default function Index({ posts, globalData }) {
 
+
   
 // //make a fetch function to get the data from the API
 // async function getOccupancy(){
